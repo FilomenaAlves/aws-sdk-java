@@ -16,46 +16,39 @@ package com.amazonaws.services.sns.model;
 import java.io.Serializable;
 
 /**
- * 
+ * Publish Result
  */
 public class PublishResult  implements Serializable  {
 
     /**
-     * Unique identifier assigned to the published message. <p>Length
-     * Constraint: Maximum 100 characters
+     * Unique identifier assigned to the published message.
      */
     private String messageId;
 
     /**
-     * Unique identifier assigned to the published message. <p>Length
-     * Constraint: Maximum 100 characters
+     * Unique identifier assigned to the published message.
      *
-     * @return Unique identifier assigned to the published message. <p>Length
-     *         Constraint: Maximum 100 characters
+     * @return Unique identifier assigned to the published message.
      */
     public String getMessageId() {
         return messageId;
     }
     
     /**
-     * Unique identifier assigned to the published message. <p>Length
-     * Constraint: Maximum 100 characters
+     * Unique identifier assigned to the published message.
      *
-     * @param messageId Unique identifier assigned to the published message. <p>Length
-     *         Constraint: Maximum 100 characters
+     * @param messageId Unique identifier assigned to the published message.
      */
     public void setMessageId(String messageId) {
         this.messageId = messageId;
     }
     
     /**
-     * Unique identifier assigned to the published message. <p>Length
-     * Constraint: Maximum 100 characters
+     * Unique identifier assigned to the published message.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param messageId Unique identifier assigned to the published message. <p>Length
-     *         Constraint: Maximum 100 characters
+     * @param messageId Unique identifier assigned to the published message.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together. 
@@ -77,7 +70,7 @@ public class PublishResult  implements Serializable  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getMessageId() != null) sb.append("MessageId: " + getMessageId() );
         sb.append("}");
         return sb.toString();

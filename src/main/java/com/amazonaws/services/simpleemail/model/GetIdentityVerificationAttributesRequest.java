@@ -30,7 +30,7 @@ public class GetIdentityVerificationAttributesRequest extends AmazonWebServiceRe
     /**
      * A list of identities.
      */
-    private com.amazonaws.internal.ListWithAutoConstructFlag<String> identities;
+    private java.util.List<String> identities;
 
     /**
      * A list of identities.
@@ -40,8 +40,7 @@ public class GetIdentityVerificationAttributesRequest extends AmazonWebServiceRe
     public java.util.List<String> getIdentities() {
         
         if (identities == null) {
-              identities = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
-              identities.setAutoConstruct(true);
+            identities = new java.util.ArrayList<String>();
         }
         return identities;
     }
@@ -56,7 +55,8 @@ public class GetIdentityVerificationAttributesRequest extends AmazonWebServiceRe
             this.identities = null;
             return;
         }
-        com.amazonaws.internal.ListWithAutoConstructFlag<String> identitiesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(identities.size());
+
+        java.util.List<String> identitiesCopy = new java.util.ArrayList<String>(identities.size());
         identitiesCopy.addAll(identities);
         this.identities = identitiesCopy;
     }
@@ -93,7 +93,7 @@ public class GetIdentityVerificationAttributesRequest extends AmazonWebServiceRe
         if (identities == null) {
             this.identities = null;
         } else {
-            com.amazonaws.internal.ListWithAutoConstructFlag<String> identitiesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(identities.size());
+            java.util.List<String> identitiesCopy = new java.util.ArrayList<String>(identities.size());
             identitiesCopy.addAll(identities);
             this.identities = identitiesCopy;
         }
@@ -112,7 +112,7 @@ public class GetIdentityVerificationAttributesRequest extends AmazonWebServiceRe
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getIdentities() != null) sb.append("Identities: " + getIdentities() );
         sb.append("}");
         return sb.toString();

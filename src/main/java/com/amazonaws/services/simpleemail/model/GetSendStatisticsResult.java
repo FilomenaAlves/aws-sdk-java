@@ -27,7 +27,7 @@ public class GetSendStatisticsResult  implements Serializable  {
      * A list of data points, each of which represents 15 minutes of
      * activity.
      */
-    private com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint> sendDataPoints;
+    private java.util.List<SendDataPoint> sendDataPoints;
 
     /**
      * A list of data points, each of which represents 15 minutes of
@@ -39,8 +39,7 @@ public class GetSendStatisticsResult  implements Serializable  {
     public java.util.List<SendDataPoint> getSendDataPoints() {
         
         if (sendDataPoints == null) {
-              sendDataPoints = new com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint>();
-              sendDataPoints.setAutoConstruct(true);
+            sendDataPoints = new java.util.ArrayList<SendDataPoint>();
         }
         return sendDataPoints;
     }
@@ -57,7 +56,8 @@ public class GetSendStatisticsResult  implements Serializable  {
             this.sendDataPoints = null;
             return;
         }
-        com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint> sendDataPointsCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint>(sendDataPoints.size());
+
+        java.util.List<SendDataPoint> sendDataPointsCopy = new java.util.ArrayList<SendDataPoint>(sendDataPoints.size());
         sendDataPointsCopy.addAll(sendDataPoints);
         this.sendDataPoints = sendDataPointsCopy;
     }
@@ -98,7 +98,7 @@ public class GetSendStatisticsResult  implements Serializable  {
         if (sendDataPoints == null) {
             this.sendDataPoints = null;
         } else {
-            com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint> sendDataPointsCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<SendDataPoint>(sendDataPoints.size());
+            java.util.List<SendDataPoint> sendDataPointsCopy = new java.util.ArrayList<SendDataPoint>(sendDataPoints.size());
             sendDataPointsCopy.addAll(sendDataPoints);
             this.sendDataPoints = sendDataPointsCopy;
         }
@@ -117,7 +117,7 @@ public class GetSendStatisticsResult  implements Serializable  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getSendDataPoints() != null) sb.append("SendDataPoints: " + getSendDataPoints() );
         sb.append("}");
         return sb.toString();

@@ -38,8 +38,6 @@ public class ListTopicsRequest extends AmazonWebServiceRequest  implements Seria
      */
     public ListTopicsRequest() {}
     
-
-
     /**
      * Constructs a new ListTopicsRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -48,7 +46,7 @@ public class ListTopicsRequest extends AmazonWebServiceRequest  implements Seria
      * @param nextToken Token returned by the previous ListTopics request.
      */
     public ListTopicsRequest(String nextToken) {
-        setNextToken(nextToken);
+        this.nextToken = nextToken;
     }
 
     
@@ -98,7 +96,7 @@ public class ListTopicsRequest extends AmazonWebServiceRequest  implements Seria
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getNextToken() != null) sb.append("NextToken: " + getNextToken() );
         sb.append("}");
         return sb.toString();

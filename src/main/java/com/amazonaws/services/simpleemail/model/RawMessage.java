@@ -38,8 +38,6 @@ public class RawMessage  implements Serializable  {
      */
     public RawMessage() {}
     
-
-
     /**
      * Constructs a new RawMessage object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -53,7 +51,7 @@ public class RawMessage  implements Serializable  {
      * SES Developer Guide</a>.
      */
     public RawMessage(java.nio.ByteBuffer data) {
-        setData(data);
+        this.data = data;
     }
 
     
@@ -133,7 +131,7 @@ public class RawMessage  implements Serializable  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getData() != null) sb.append("Data: " + getData() );
         sb.append("}");
         return sb.toString();

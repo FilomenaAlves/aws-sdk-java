@@ -37,8 +37,6 @@ public class GetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
      */
     public GetSubscriptionAttributesRequest() {}
     
-
-
     /**
      * Constructs a new GetSubscriptionAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -48,7 +46,7 @@ public class GetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
      * you want to get.
      */
     public GetSubscriptionAttributesRequest(String subscriptionArn) {
-        setSubscriptionArn(subscriptionArn);
+        this.subscriptionArn = subscriptionArn;
     }
 
     
@@ -98,7 +96,7 @@ public class GetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getSubscriptionArn() != null) sb.append("SubscriptionArn: " + getSubscriptionArn() );
         sb.append("}");
         return sb.toString();

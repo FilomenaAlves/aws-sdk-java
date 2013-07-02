@@ -62,7 +62,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
      * The reply-to email address(es) for the message. If the recipient
      * replies to the message, each reply-to address will receive the reply.
      */
-    private com.amazonaws.internal.ListWithAutoConstructFlag<String> replyToAddresses;
+    private java.util.List<String> replyToAddresses;
 
     /**
      * The email address to which bounce notifications are to be forwarded.
@@ -79,8 +79,6 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
      */
     public SendEmailRequest() {}
     
-
-
     /**
      * Constructs a new SendEmailRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -92,9 +90,9 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
      * @param message The message to be sent.
      */
     public SendEmailRequest(String source, Destination destination, Message message) {
-        setSource(source);
-        setDestination(destination);
-        setMessage(message);
+        this.source = source;
+        this.destination = destination;
+        this.message = message;
     }
 
     
@@ -211,8 +209,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
     public java.util.List<String> getReplyToAddresses() {
         
         if (replyToAddresses == null) {
-              replyToAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
-              replyToAddresses.setAutoConstruct(true);
+            replyToAddresses = new java.util.ArrayList<String>();
         }
         return replyToAddresses;
     }
@@ -229,7 +226,8 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
             this.replyToAddresses = null;
             return;
         }
-        com.amazonaws.internal.ListWithAutoConstructFlag<String> replyToAddressesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(replyToAddresses.size());
+
+        java.util.List<String> replyToAddressesCopy = new java.util.ArrayList<String>(replyToAddresses.size());
         replyToAddressesCopy.addAll(replyToAddresses);
         this.replyToAddresses = replyToAddressesCopy;
     }
@@ -270,7 +268,7 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
         if (replyToAddresses == null) {
             this.replyToAddresses = null;
         } else {
-            com.amazonaws.internal.ListWithAutoConstructFlag<String> replyToAddressesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(replyToAddresses.size());
+            java.util.List<String> replyToAddressesCopy = new java.util.ArrayList<String>(replyToAddresses.size());
             replyToAddressesCopy.addAll(replyToAddresses);
             this.replyToAddresses = replyToAddressesCopy;
         }
@@ -347,11 +345,11 @@ public class SendEmailRequest extends AmazonWebServiceRequest  implements Serial
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        if (getSource() != null) sb.append("Source: " + getSource() + ",");
-        if (getDestination() != null) sb.append("Destination: " + getDestination() + ",");
-        if (getMessage() != null) sb.append("Message: " + getMessage() + ",");
-        if (getReplyToAddresses() != null) sb.append("ReplyToAddresses: " + getReplyToAddresses() + ",");
+        sb.append("{");    	
+        if (getSource() != null) sb.append("Source: " + getSource() + ",");    	
+        if (getDestination() != null) sb.append("Destination: " + getDestination() + ",");    	
+        if (getMessage() != null) sb.append("Message: " + getMessage() + ",");    	
+        if (getReplyToAddresses() != null) sb.append("ReplyToAddresses: " + getReplyToAddresses() + ",");    	
         if (getReturnPath() != null) sb.append("ReturnPath: " + getReturnPath() );
         sb.append("}");
         return sb.toString();

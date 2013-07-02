@@ -43,8 +43,6 @@ public class Body  implements Serializable  {
      */
     public Body() {}
     
-
-
     /**
      * Constructs a new Body object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -55,7 +53,7 @@ public class Body  implements Serializable  {
      * mobile devices).
      */
     public Body(Content text) {
-        setText(text);
+        this.text = text;
     }
 
     
@@ -163,8 +161,8 @@ public class Body  implements Serializable  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        if (getText() != null) sb.append("Text: " + getText() + ",");
+        sb.append("{");    	
+        if (getText() != null) sb.append("Text: " + getText() + ",");    	
         if (getHtml() != null) sb.append("Html: " + getHtml() );
         sb.append("}");
         return sb.toString();

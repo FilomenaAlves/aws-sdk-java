@@ -33,8 +33,7 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
 
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     * <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     * topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      */
     private String attributeName;
 
@@ -49,8 +48,6 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
      */
     public SetTopicAttributesRequest() {}
     
-
-
     /**
      * Constructs a new SetTopicAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -58,15 +55,14 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
      * 
      * @param topicArn The ARN of the topic to modify.
      * @param attributeName The name of the attribute you want to set. Only a
-     * subset of the topic's attributes are mutable. <p>Valid values:
-     * <code>Policy</code> | <code>DisplayName</code> |
-     * <code>DeliveryPolicy</code>
+     * subset of the topic's attributes are mutable. <p>Valid values: Policy
+     * | DisplayName
      * @param attributeValue The new value for the attribute.
      */
     public SetTopicAttributesRequest(String topicArn, String attributeName, String attributeValue) {
-        setTopicArn(topicArn);
-        setAttributeName(attributeName);
-        setAttributeValue(attributeValue);
+        this.topicArn = topicArn;
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
     }
 
     
@@ -107,12 +103,10 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     * <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     * topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      *
      * @return The name of the attribute you want to set. Only a subset of the
-     *         topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     *         <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     *         topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      */
     public String getAttributeName() {
         return attributeName;
@@ -120,12 +114,10 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     * <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     * topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      *
      * @param attributeName The name of the attribute you want to set. Only a subset of the
-     *         topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     *         <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     *         topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      */
     public void setAttributeName(String attributeName) {
         this.attributeName = attributeName;
@@ -133,14 +125,12 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     * <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     * topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param attributeName The name of the attribute you want to set. Only a subset of the
-     *         topic's attributes are mutable. <p>Valid values: <code>Policy</code> |
-     *         <code>DisplayName</code> | <code>DeliveryPolicy</code>
+     *         topic's attributes are mutable. <p>Valid values: Policy | DisplayName
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together. 
@@ -196,9 +186,9 @@ public class SetTopicAttributesRequest extends AmazonWebServiceRequest  implemen
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        if (getTopicArn() != null) sb.append("TopicArn: " + getTopicArn() + ",");
-        if (getAttributeName() != null) sb.append("AttributeName: " + getAttributeName() + ",");
+        sb.append("{");    	
+        if (getTopicArn() != null) sb.append("TopicArn: " + getTopicArn() + ",");    	
+        if (getAttributeName() != null) sb.append("AttributeName: " + getAttributeName() + ",");    	
         if (getAttributeValue() != null) sb.append("AttributeValue: " + getAttributeValue() );
         sb.append("}");
         return sb.toString();

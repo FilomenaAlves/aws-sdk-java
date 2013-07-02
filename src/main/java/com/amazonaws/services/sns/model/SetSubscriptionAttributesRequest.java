@@ -33,13 +33,12 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
 
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * subscriptions attributes are mutable. <p>Valid values:
-     * <code>DeliveryPolicy</code>
+     * subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      */
     private String attributeName;
 
     /**
-     * The new value for the attribute in JSON format.
+     * The new value for the attribute.
      */
     private String attributeValue;
 
@@ -49,8 +48,6 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
      */
     public SetSubscriptionAttributesRequest() {}
     
-
-
     /**
      * Constructs a new SetSubscriptionAttributesRequest object.
      * Callers should use the setter or fluent setter (with...) methods to
@@ -59,13 +56,13 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
      * @param subscriptionArn The ARN of the subscription to modify.
      * @param attributeName The name of the attribute you want to set. Only a
      * subset of the subscriptions attributes are mutable. <p>Valid values:
-     * <code>DeliveryPolicy</code>
-     * @param attributeValue The new value for the attribute in JSON format.
+     * DeliveryPolicy
+     * @param attributeValue The new value for the attribute.
      */
     public SetSubscriptionAttributesRequest(String subscriptionArn, String attributeName, String attributeValue) {
-        setSubscriptionArn(subscriptionArn);
-        setAttributeName(attributeName);
-        setAttributeValue(attributeValue);
+        this.subscriptionArn = subscriptionArn;
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
     }
 
     
@@ -106,12 +103,10 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * subscriptions attributes are mutable. <p>Valid values:
-     * <code>DeliveryPolicy</code>
+     * subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      *
      * @return The name of the attribute you want to set. Only a subset of the
-     *         subscriptions attributes are mutable. <p>Valid values:
-     *         <code>DeliveryPolicy</code>
+     *         subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      */
     public String getAttributeName() {
         return attributeName;
@@ -119,12 +114,10 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * subscriptions attributes are mutable. <p>Valid values:
-     * <code>DeliveryPolicy</code>
+     * subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      *
      * @param attributeName The name of the attribute you want to set. Only a subset of the
-     *         subscriptions attributes are mutable. <p>Valid values:
-     *         <code>DeliveryPolicy</code>
+     *         subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      */
     public void setAttributeName(String attributeName) {
         this.attributeName = attributeName;
@@ -132,14 +125,12 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     
     /**
      * The name of the attribute you want to set. Only a subset of the
-     * subscriptions attributes are mutable. <p>Valid values:
-     * <code>DeliveryPolicy</code>
+     * subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
      * @param attributeName The name of the attribute you want to set. Only a subset of the
-     *         subscriptions attributes are mutable. <p>Valid values:
-     *         <code>DeliveryPolicy</code>
+     *         subscriptions attributes are mutable. <p>Valid values: DeliveryPolicy
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together. 
@@ -151,29 +142,29 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     
     
     /**
-     * The new value for the attribute in JSON format.
+     * The new value for the attribute.
      *
-     * @return The new value for the attribute in JSON format.
+     * @return The new value for the attribute.
      */
     public String getAttributeValue() {
         return attributeValue;
     }
     
     /**
-     * The new value for the attribute in JSON format.
+     * The new value for the attribute.
      *
-     * @param attributeValue The new value for the attribute in JSON format.
+     * @param attributeValue The new value for the attribute.
      */
     public void setAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
     }
     
     /**
-     * The new value for the attribute in JSON format.
+     * The new value for the attribute.
      * <p>
      * Returns a reference to this object so that method calls can be chained together.
      *
-     * @param attributeValue The new value for the attribute in JSON format.
+     * @param attributeValue The new value for the attribute.
      *
      * @return A reference to this updated object so that method calls can be chained 
      *         together. 
@@ -195,9 +186,9 @@ public class SetSubscriptionAttributesRequest extends AmazonWebServiceRequest  i
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        if (getSubscriptionArn() != null) sb.append("SubscriptionArn: " + getSubscriptionArn() + ",");
-        if (getAttributeName() != null) sb.append("AttributeName: " + getAttributeName() + ",");
+        sb.append("{");    	
+        if (getSubscriptionArn() != null) sb.append("SubscriptionArn: " + getSubscriptionArn() + ",");    	
+        if (getAttributeName() != null) sb.append("AttributeName: " + getAttributeName() + ",");    	
         if (getAttributeValue() != null) sb.append("AttributeValue: " + getAttributeValue() );
         sb.append("}");
         return sb.toString();

@@ -25,7 +25,7 @@ public class ListVerifiedEmailAddressesResult  implements Serializable  {
     /**
      * A list of email addresses that have been verified.
      */
-    private com.amazonaws.internal.ListWithAutoConstructFlag<String> verifiedEmailAddresses;
+    private java.util.List<String> verifiedEmailAddresses;
 
     /**
      * A list of email addresses that have been verified.
@@ -35,8 +35,7 @@ public class ListVerifiedEmailAddressesResult  implements Serializable  {
     public java.util.List<String> getVerifiedEmailAddresses() {
         
         if (verifiedEmailAddresses == null) {
-              verifiedEmailAddresses = new com.amazonaws.internal.ListWithAutoConstructFlag<String>();
-              verifiedEmailAddresses.setAutoConstruct(true);
+            verifiedEmailAddresses = new java.util.ArrayList<String>();
         }
         return verifiedEmailAddresses;
     }
@@ -51,7 +50,8 @@ public class ListVerifiedEmailAddressesResult  implements Serializable  {
             this.verifiedEmailAddresses = null;
             return;
         }
-        com.amazonaws.internal.ListWithAutoConstructFlag<String> verifiedEmailAddressesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(verifiedEmailAddresses.size());
+
+        java.util.List<String> verifiedEmailAddressesCopy = new java.util.ArrayList<String>(verifiedEmailAddresses.size());
         verifiedEmailAddressesCopy.addAll(verifiedEmailAddresses);
         this.verifiedEmailAddresses = verifiedEmailAddressesCopy;
     }
@@ -88,7 +88,7 @@ public class ListVerifiedEmailAddressesResult  implements Serializable  {
         if (verifiedEmailAddresses == null) {
             this.verifiedEmailAddresses = null;
         } else {
-            com.amazonaws.internal.ListWithAutoConstructFlag<String> verifiedEmailAddressesCopy = new com.amazonaws.internal.ListWithAutoConstructFlag<String>(verifiedEmailAddresses.size());
+            java.util.List<String> verifiedEmailAddressesCopy = new java.util.ArrayList<String>(verifiedEmailAddresses.size());
             verifiedEmailAddressesCopy.addAll(verifiedEmailAddresses);
             this.verifiedEmailAddresses = verifiedEmailAddressesCopy;
         }
@@ -107,7 +107,7 @@ public class ListVerifiedEmailAddressesResult  implements Serializable  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
+        sb.append("{");    	
         if (getVerifiedEmailAddresses() != null) sb.append("VerifiedEmailAddresses: " + getVerifiedEmailAddresses() );
         sb.append("}");
         return sb.toString();
